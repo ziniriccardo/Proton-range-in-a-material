@@ -14,8 +14,6 @@ import configparser
 import os
 import sys
 
-##some calculation for obtain energy.
-
 config = configparser.ConfigParser()
 config.read(sys.argv[1])
 
