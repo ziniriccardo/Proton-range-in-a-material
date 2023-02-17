@@ -12,7 +12,7 @@ The steps needed to run the code and plot the results are:
 
 2-	Launch the file compile.py which imports required paramteters form materials.txt using configparser library: “python compile.py materials.txt” in the command line. Input parameters can be modified choosing a different target material with its corresponding properties: density, proton/neutron ratio, ionization energy and number of protons. The resulting data are saved in the data folder using their local paths.
 
-3-	Finally, launch the plot file plot.py using the same configuration:  “python plot.py materials.txt” in the command line. Through their local paths data are load from materials.txt and the plots are saved in the plot folder. 
+3-	Finally, launch the plot file plot.py using the same configuration:  “python plot.py materials.txt” in the command line. Through their local paths data are load from materials.txt and the plots are saved in the **plot** folder. 
 
 ## Project Structure
 The project is divided into different files
@@ -25,4 +25,4 @@ The project is divided into different files
 
 •	In compile.py there is the …. Of the simulation computing the main function using parameters in input from materials.txt file. And a final text which confirms that all worked properly printing out the result.
 
-•	In plot.py there are the two final plots settings. Stopping power and energy in function of range of the particle. Using configparser data are loaded form the saved arrays.
+•	In [plot.py](/plot.py) there are the two final plots settings. Stopping power and energy in function of range of the particle. Using configparser data are loaded form the saved arrays.
