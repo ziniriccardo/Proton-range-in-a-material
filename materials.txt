@@ -1,0 +1,20 @@
+[values]
+
+energies=100
+particle=proton
+
+material=carbon
+rho= 1.7
+Z_over_A=0.49954    
+e_ioniz= 78e-6
+Z=6
+
+[paths]
+
+stop_powers: ./data/stop_powers.npy
+positions: ./data/positions.npy
+energies:  ./data/energies.npy
+
+
+plot_pic: ./plots/bragg_peak.png
+plot_pic_1: ./plots/energy.png
