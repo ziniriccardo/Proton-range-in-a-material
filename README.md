@@ -4,7 +4,7 @@ The following code simulates a proton traversing a given material computing a ra
 It first calculates energy loss for a given path through Bethe Bloch formula and its corrections.
 Then, once defined the length step, associate to every position its corresponding value of energy loss. At the end final value of energy loss is set to zero when the proton stops in the material. A correction is made in the final part of the path to make clearer the Bragg-Peak.
 
-# How to run the Simulation
+## How to run the Simulation
 The steps needed to run the code and plot the results are:
 Install all the necessary libraries using the preferred installer (like pip or conda). The libraries used in this code are numpy, configparser,  os, sys and matplotlib.
 2-	Launch the file compile.py which imports required paramteters form materials.txt using configparser library: “python compile.py materials.txt” in the command line. Input parameters can be modified choosing a different target material with its corresponding properties: density, proton/neutron ratio, ionization energy and number of protons. The resulting data are saved in the data folder using their local paths.
