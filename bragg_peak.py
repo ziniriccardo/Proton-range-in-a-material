@@ -5,9 +5,6 @@ Created on Thu Dec  1 16:53:34 2022
 @author: ricky
 """
 
-#Constants
-
-
 import numpy as np
 from math import log as ln
 
@@ -81,19 +78,18 @@ def compute_bethe_bloch(particle,energy,material,mat_properties):
         energy_beam=energy_beam-dE
         
         position+=1 
-    
+ 
         
-        
-    #re-initialize vectors
+    #Re-initialize vectors
     #New loop used to make plots. Needed because stepsize is defined by path length of particle to make each
     #Each point in the plot equally spaced
+    
     x=0
     stop_power=0
     
     #depth step
     dx=positions[position-1]/(1000) 
     
-     
     energy_beam=energy
     dE=energy/N
     
