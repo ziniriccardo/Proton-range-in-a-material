@@ -39,7 +39,6 @@ e_ioniz= float(config.get('values', 'e_ioniz'))
 Z=int(config.get('values', 'Z'))
 
 
-
 mat_properties=[rho,Z_over_A,e_ioniz,Z]
 
 
@@ -64,37 +63,5 @@ if   len(plot_vectors[0])!=0 and len(plot_vectors[1])!=0 :
     print ('Range ' , plot_vectors[1][plot_vectors[4]-1]/mat_properties[0], 'cm , ' , plot_vectors[1][plot_vectors[4]-1], 'g/cm**2')
 
 else: print("Particle of 0 MeV has range 0 cm.")
-    
-
-
-##Spread ou Bragg Peak-SOBP.
-###out only one value in energies vector!
-
-'''
-
-if len(energies)>1: print ("only one value needed in energies vector")
-
-sobp_stop_powers=np.empty(len(plot_vectors[0][2]))
-sobp_positions=np.ndarray(len(plot_vectors[0][4]))
-color_mat=''
-sobp_vectors=[]
-
-energies_bp=np.linspace(50,60,100)
-
-for i in range(0,len(energies_bp)):
-    single_bp_0=bp.compute_bethe_bloch(beam,energies_bp[i],material)
-    single_bp_1=bp.compute_dose(single_bp_0)
-    #if len(single_bp_1)==len(sobp_stop_powers):
-    sobp_stop_powers+=single_bp_1[2]
-    sobp_positions=single_bp_1[4]
-    color_mat=single_bp_1[7]
-        
-    #else: continue   
-    
-sobp_vectors.append(sobp_stop_powers)
-sobp_vectors.append(sobp_positions)
-sobp_vectors.append(material)
-sobp_vectors.append(color_mat)
-
-plots.make_bp_plots(sobp_vectors)
-'''
+  
+  
