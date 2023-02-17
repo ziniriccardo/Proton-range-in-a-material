@@ -26,3 +26,5 @@ The project is divided into different files
 •	In [compile.py](/compile.py)  there is the …. Of the simulation computing the main function using parameters in input from materials.txt file. And a final text which confirms that all worked properly printing out the result.
 
 •	In [plot.py](/plot.py) there are the two final plots settings. Stopping power and energy in function of range of the particle. Using configparser data are loaded form the saved arrays.
+
+![] (/images/bragg_peak.png)
