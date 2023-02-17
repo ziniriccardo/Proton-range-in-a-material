@@ -55,8 +55,3 @@ def test_total_energy():
         total_e+=de
     
     assert total_e<=energy
-  
-    
-    
-#test_bethe_bloch()
-#test_value_bethe_bloch()
