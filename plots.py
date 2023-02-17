@@ -14,7 +14,6 @@ import configparser
 configu = configparser.ConfigParser()
 configu.read(sys.argv[1])
 
-
 source0= configu.get('paths', 'stop_powers')
 source1=configu.get('paths', 'positions')
 source2=configu.get('paths','energies')
@@ -56,22 +55,6 @@ def make_plots():
     plt.subplots_adjust(left=0.1,bottom=0.1,right=0.9,top=0.9,wspace=0.3, hspace=0.4)
     plt.savefig(image_destination_1)
  
-"""
-def make_bp_plots(plots):
-    fig,ax1 = plt.subplots()  
-    stop_powers_1=plots[0]
-    positions=plots[1]
-    material=plots[2]
-    color_mat=plots[3]
-    
-    ax1.plot(positions,stop_powers_1,label= material,color=color_mat)
-    ax1.set_xlabel('range g/cm**"2') 
-    ax1.set_ylabel('Dose Gy') 
-    
-    ax1.legend(loc='upper center')
-    plt.savefig('SOBP')    
-"""
-
 make_plots()
 print("Image plots saved:"+ image_destination+ ' and '+ image_destination_1)
 
