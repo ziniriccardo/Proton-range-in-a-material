@@ -21,14 +21,14 @@ The project is divided into different files
 
 •	In [bragg_peak.py](/bragg_peak.py) there is the main function which compute Bethe Bloch, ranges and energies values. After its execution arrays are saved for analysis.
 
-•	In [testing.py](/testing.py) are present few test for the main function in order to control cases for special input parameters and control result of range for a known case.
+•	In [testing.py](/testing.py) are present few tests for the main function in order to control cases with special input parameters and control result of range for a known case.
 
-•	In [materials.txt](/materials.txt) there are all input parameters for particle and target material and local paths for the array data and for plots.
+•	In [materials.txt](/materials.txt) there are all input parameters for particle and target material and local paths for the array data and for the plots.
 
-•	In [compile_bragg.py](/compile_bragg.py)  there is the …. Of the simulation computing the main function using parameters in input from materials.txt file. And a final text which confirms that all worked properly printing out the result.
+•	In [compile_bragg.py](/compile_bragg.py) there is the main part of the simulation: it computes the main function using parameters in input from materials.txt file. And a final terminal output which confirms that all worked properly printing out the result.
 
 •	In [plot.py](/plot.py) there are the two final plots settings. Stopping power and energy in function of range of the particle. Using configparser data are loaded form the saved arrays.
 
-Final plots for a proton energy of 100 MeV
+Final plots for a proton energy of 100 MeV:
 
 ![](/images/bragg_peak.png) ![](/images/energy.png)
