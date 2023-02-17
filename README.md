@@ -7,6 +7,7 @@ Then, once defined the length step, associate to every position its correspondin
 
 ## How to run the Simulation
 The steps needed to run the code and plot the results are:
+
 Install all the necessary libraries using the preferred installer (like pip or conda). The libraries used in this code are numpy, configparser,  os, sys and matplotlib.
 2-	Launch the file compile.py which imports required paramteters form materials.txt using configparser library: “python compile.py materials.txt” in the command line. Input parameters can be modified choosing a different target material with its corresponding properties: density, proton/neutron ratio, ionization energy and number of protons. The resulting data are saved in the data folder using their local paths.
 3-	Finally, launch the plot file plot.py using the same configuration:  “python plot.py materials.txt” in the command line. Through their local paths data are load from materials.txt and the plots are saved in the plot folder. 
