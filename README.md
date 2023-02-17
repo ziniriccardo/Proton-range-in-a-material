@@ -2,8 +2,10 @@
 
 ## Proton traversing material simlation 
 The following code simulates a proton traversing a given material computing a range calculation using Bethe Bloch formula.
-It first calculates energy loss for a given path through Bethe Bloch formula and its corrections.
-Then, once defined the length step, associate to every position its corresponding value of energy loss. At the end final value of energy loss is set to zero when the proton stops in the material. A correction is made in the final part of the path to make clearer the Bragg-Peak.
+It first calculates, given the initial energy of the proton, all variables needed to compute energy loss for a given path through Bethe Bloch formula. Also density and shell corrections are computed.
+Then, once defined the length step, associate to every proton position its corresponding value of energy loss and its energy. 
+
+At the end final value of energy loss is set to zero when the proton stops in the material; a correction is made in the final part of the path to make clearer the Bragg-Peak.
 
 ## How to run the Simulation
 The steps needed to run the code and plot the results are:
