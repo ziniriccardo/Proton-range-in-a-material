@@ -15,6 +15,5 @@ stop_powers: ./data/stop_powers.npy
 positions: ./data/positions.npy
 energies:  ./data/energies.npy
 
-
 plot_pic: ./plots/bragg_peak.png
 plot_pic_1: ./plots/energy.png
