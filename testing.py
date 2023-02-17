@@ -6,14 +6,6 @@ Created on Mon Feb  6 17:02:22 2023
 """
 
 import bragg_peak as bp
-import hypothesis
-
-from hypothesis import strategies as st
-from hypothesis import settings
-from hypothesis import given
-
-#@given(energy=0)
-#@settings(max_examples=1)
 
 def test_bethe_bloch():
     particle='proton'
