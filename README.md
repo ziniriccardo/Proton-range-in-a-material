@@ -1,4 +1,4 @@
-# Proton-range
+# Proton Range in a material
 
 ## Proton traversing material simlation 
 The following code simulates a proton traversing a given material computing a range calculation using Bethe Bloch formula.
