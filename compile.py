@@ -33,7 +33,7 @@ Z=int(config.get('values', 'Z'))
 
 mat_properties=[rho,Z_over_A,e_ioniz,Z]
 
-plot_vectors=bp.compute_bethe_bloch(particle,energies,material,mat_properties)
+plot_vectors=pr.compute_range(particle,energies,material,mat_properties)
 
 np.save(destination0, plot_vectors[0])
 np.save(destination1,plot_vectors[1])
