@@ -33,7 +33,6 @@ Z=int(config.get('values', 'Z'))
 
 mat_properties=[rho,Z_over_A,e_ioniz,Z]
 
-
 #main function computation
 plot_vectors=bp.compute_bethe_bloch(particle,energies,material,mat_properties)
    
