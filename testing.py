@@ -7,9 +7,6 @@ Created on Mon Feb  6 17:02:22 2023
 
 import proton_range as pr
 
-#@given(energy=0)
-#@settings(max_examples=1)
-
 def test_zero_energy():
     particle='proton'
     material='carbon'
