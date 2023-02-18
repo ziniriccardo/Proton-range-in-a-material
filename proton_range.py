@@ -21,9 +21,8 @@ def compute_range(particle,energy,material,mat_properties):
         mat_properties: properties of the material: density (rho), ratio Z/A (Z_over_A), ionization energy (e_ioniz) and number of protons Z.
         
     """
-    
     #Contants for Bethe Bloch calculation
-  
+    
     # Mev*cm^2/g
     K=0.307075 
     #electron mass  MeV/c**2
