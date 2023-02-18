@@ -51,7 +51,6 @@ def make_plots():
     
     ax.legend(loc='upper right')
 
-    #set distances between plots
     plt.subplots_adjust(left=0.11,bottom=0.12,right=0.95,top=0.95,wspace=0.3, hspace=0.4)
     plt.savefig(image_destination_1)
  
