@@ -38,13 +38,13 @@ def make_plots():
 
     ax.legend(loc='upper center')
         
-    plt.subplots_adjust(left=0.1,bottom=0.1,right=0.9,top=0.9,wspace=0.3, hspace=0.4)
+    plt.subplots_adjust(left=0.1,bottom=0.12,right=0.95,top=0.95,wspace=0.3, hspace=0.4)
     plt.savefig(image_destination)
     
     #Energy plot
     fig,ax = plt.subplots()
     
-    ax.scatter(positions,energies,label= material,s=2)
+    ax.plot(positions,energies,label= material)
     
     ax.set_xlabel('Range (g/cm**2)') 
     ax.set_ylabel('Energy (MeV \cm g**-1)') 
@@ -52,7 +52,7 @@ def make_plots():
     ax.legend(loc='upper right')
 
     #set distances between plots
-    plt.subplots_adjust(left=0.1,bottom=0.1,right=0.9,top=0.9,wspace=0.3, hspace=0.4)
+    plt.subplots_adjust(left=0.11,bottom=0.12,right=0.95,top=0.95,wspace=0.3, hspace=0.4)
     plt.savefig(image_destination_1)
  
 make_plots()
