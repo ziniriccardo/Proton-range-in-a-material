@@ -37,8 +37,7 @@ def make_plots():
     ax.set_ylabel('-dE/dx (MeV cm**2 /g)') 
 
     ax.legend(loc='upper center')
-        
-    plt.subplots_adjust(left=0.1,bottom=0.12,right=0.95,top=0.95,wspace=0.3, hspace=0.4)
+      
     plt.savefig(image_destination)
     
     #Energy plot
@@ -50,8 +49,7 @@ def make_plots():
     ax.set_ylabel('Energy (MeV \cm g**-1)') 
     
     ax.legend(loc='upper right')
-
-    plt.subplots_adjust(left=0.11,bottom=0.12,right=0.95,top=0.95,wspace=0.3, hspace=0.4)
+    
     plt.savefig(image_destination_1)
  
 make_plots()
