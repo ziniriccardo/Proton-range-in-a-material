@@ -1,6 +1,6 @@
-# Proton Range calculation
+# Proton Range
 
-## Proton range in a material  
+## Proton range calculation in a material  
 The following code  makes a calculation of the proton range in a given material using Bethe Bloch formula; input variables are needed to properly compute the formula: initial energy of the proton, the target material and its properties: density (rho), ratio betweeen proton and neutron (Z_over_A), ionization energy(e_ioniz) and number of protons (Z). In this way any type of material can be choose as target. In the example reported a 100 MeV proton into a carbon target was used.
 
 Once parameters are given the main function defines all quantities needed to compute the Stoopping Power using Bethe Bloch formula.
