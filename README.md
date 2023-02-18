@@ -6,7 +6,7 @@ The following code  makes a calculation of the proton range in a given material 
 Once parameters are given the main function defines all quantities needed to compute the Stoopping Power using Bethe Bloch formula.
 At the end final value of energy loss is set to zero when the proton stops in the material; a correction is made in the final part of the path to make clearer the Bragg-Peak.
 The energy and the lenght step are set and the range calculation is finally made. 
-As a reference two plots are produced in fucntion of the range: the Stopping Power and the energy of the proton.
+As a reference two plots are produced both in function of the range: the Stopping Power which shows the Bragg-Peak shape and the energy of the proton showing a decreasing behaviour.
 
 
 ## How to make the calculation
