@@ -13,6 +13,7 @@ def test_zero_energy():
     energy=0
     mat_properties=[ 1.7,0.49954, 78e-6, 6]
     stop_powers= pr.compute_range(particle, energy, material, mat_properties)
+    #Test if energy=0 corresponds to a zero size vector for stop_power
     assert len(stop_powers[0])==0
   
     
@@ -29,6 +30,8 @@ def test_water_value():
     min_range=final_range-0.1*aspected_range
     max_range=final_range+ 0.1*aspected_range
     
+    #Test if aspected value of range for 200 MeV proton in water is as aspected
+    #10% error considered due to secindary fragments and nuclear interaction not considered
     assert final_range>=min_range and final_range<=max_range
     
     
@@ -46,5 +49,6 @@ def test_total_energy():
         de=stop_powers[0][i]*(stop_powers[1][i+1]- stop_powers[1][i])
         total_energy+=de
     
+    #Test if the sum of all individual de is slower or at most equal to proton energy
     assert total_energy<=energy
   
