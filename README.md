@@ -1,13 +1,13 @@
 # Proton Range in a material
 
 ## Proton traversing material simlation 
-The following code simulates a proton traversing a given material computing a range calculation using Bethe Bloch formula.
+The following code  makes a calculation of the proton range in a given material using Bethe Bloch formula.
 It first calculates, given the initial energy of the proton, all variables needed to compute energy loss for a given path through Bethe Bloch formula. Also density and shell corrections are computed.
 Then, once defined the length step, associate to every proton position its corresponding value of energy loss and its energy. 
 
 At the end final value of energy loss is set to zero when the proton stops in the material; a correction is made in the final part of the path to make clearer the Bragg-Peak.
 
-## How to run the Simulation
+## How run code
 The steps needed to run the code and plot the results are:
 
 1-Install all the necessary libraries using the preferred installer (like pip or conda). The libraries used in this code are numpy, configparser,  os, sys and matplotlib.
