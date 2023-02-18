@@ -9,7 +9,7 @@ The energy and the lenght step are set and the range calculation is finally made
 As a reference two plots are produced in fucntion of the range: the Stopping Power and the energy of the proton.
 
 
-## How make calculation
+## How to make the calculation
 The steps needed to run the code and plot the results are:
 
 1-Install all the necessary libraries using the preferred installer (like pip or conda). The libraries used in this code are numpy, configparser,  os, sys and matplotlib.
