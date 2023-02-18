@@ -1,7 +1,7 @@
 # Proton Range in a material
 
 ## Proton traversing material simlation 
-The following code  makes a calculation of the proton range in a given material using Bethe Bloch formula; input variables are needed to properly compute the formula: initial energy of the proton, the target material and its properties: density (rho), ratio betweeen proton and neutron (Z_over_A), ionization energy(e_ioniz) and number of protons (Z). In this way any type of material can be choose as target. In the example reported a 100 MeV proton into a carbon beam was used.
+The following code  makes a calculation of the proton range in a given material using Bethe Bloch formula; input variables are needed to properly compute the formula: initial energy of the proton, the target material and its properties: density (rho), ratio betweeen proton and neutron (Z_over_A), ionization energy(e_ioniz) and number of protons (Z). In this way any type of material can be choose as target. In the example reported a 100 MeV proton into a carbon target was used.
 
 Once parameters are given the main function computes all quantities needed to compute the Stoopping Power using Bethe Bloch formula.
 At the end final value of energy loss is set to zero when the proton stops in the material; a correction is made in the final part of the path to make clearer the Bragg-Peak.
