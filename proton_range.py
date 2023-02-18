@@ -33,15 +33,18 @@ def compute_range(particle,energy,material,mat_properties):
     dx=0
     stop_power=0
     energy_beam=energy
+    #proton mass in MeV
     part_mass= 938.272
+    
     #proton charge
     z=1
+    
     part_rest_energy=part_mass
     
     #vectors size
     N=10000
-    
     positions=np.empty(N)
+    
     #energy step
     dE=energy/1000
     #position index
@@ -60,13 +63,13 @@ def compute_range(particle,energy,material,mat_properties):
 
         energy_plasma=28.816e-6*np.sqrt(mat_properties[0]*mat_properties[1])
         
-        #corrections 
+        #Corrections 
         delta_corr=ln(energy_plasma*beta_gamma/mat_properties[2])+1
         shell=-(2*ln(mat_properties[2]/energy_plasma)+1)
                 
         stop_power=(K*z**2*mat_properties[1]/beta**2)*(0.5*ln( 2*m_e*beta_gamma**2*tmax/mat_properties[2]**2)- beta**2 -delta_corr/2 -shell/mat_properties[3] )       
         
-        #position step
+        #Position step
         dx=dE/stop_power
         
         energy_beam=energy_beam-dE
@@ -74,9 +77,8 @@ def compute_range(particle,energy,material,mat_properties):
        
         i+=1 
             
-    #re-initialize vectors
-    #New loop used to make plots. Needed because stepsize is defined by path length of particle to make each
-    #Each point in the plot equally spaced
+    #Re-initialize vectors
+    #New loop used to make vectors for plots. Needed because stepsize is defined by path length of particle to make each point in the plot equally spaced
     
     x=0
     stop_power=0
@@ -86,7 +88,6 @@ def compute_range(particle,energy,material,mat_properties):
     
     energy_beam=energy
     
-    #create arrays
     stop_powers=np.empty(i)
     positions=np.empty(i)
     energies=np.empty(i)
