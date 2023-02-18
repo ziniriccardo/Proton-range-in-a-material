@@ -31,7 +31,7 @@ def test_water_value():
     max_range=final_range+ 0.1*aspected_range
     
     #Test if value of range for 200 MeV proton in water is as aspected
-    #10% error considered due to secondary fragments and nuclear interaction not considered
+    #10% error included due to secondary fragments and nuclear interaction not considered
     assert final_range>=min_range and final_range<=max_range
     
     
@@ -49,6 +49,6 @@ def test_total_energy():
         de=stop_powers[0][i]*(stop_powers[1][i+1]- stop_powers[1][i])
         total_energy+=de
     
-    #Test if the sum of all individual de is slower or at most equal to proton energy
+    #Test if the sum of all individual energy de is slower or at most equal to proton energy
     assert total_energy<=energy
   
