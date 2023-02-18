@@ -31,7 +31,7 @@ def test_water_value():
     max_range=final_range+ 0.1*aspected_range
     
     #Test if value of range for 200 MeV proton in water is as aspected
-    #10% error considered due to secindary fragments and nuclear interaction not considered
+    #10% error considered due to secondary fragments and nuclear interaction not considered
     assert final_range>=min_range and final_range<=max_range
     
     
