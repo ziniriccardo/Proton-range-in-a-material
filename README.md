@@ -7,7 +7,7 @@ Then, once defined the length step, associate to every proton position its corre
 
 At the end final value of energy loss is set to zero when the proton stops in the material; a correction is made in the final part of the path to make clearer the Bragg-Peak.
 
-## How run code
+## How make calculation
 The steps needed to run the code and plot the results are:
 
 1-Install all the necessary libraries using the preferred installer (like pip or conda). The libraries used in this code are numpy, configparser,  os, sys and matplotlib.
