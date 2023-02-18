@@ -13,7 +13,7 @@ def test_zero_energy():
     energy=0
     mat_properties=[ 1.7,0.49954, 78e-6, 6]
     stop_powers= pr.compute_range(particle, energy, material, mat_properties)
-    #Test if energy=0 corresponds to a zero size vector stop_powers
+    #Test if energy=0 corresponds to a zero size vector for stop_powers
     assert len(stop_powers[0])==0
   
     
