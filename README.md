@@ -29,7 +29,7 @@ The project is divided into different files
 
 •	In [plot.py](/plot.py) there are the two final plots settings. Stopping power and energy in function of range of the particle. Using configparser data are loaded form the saved arrays.
 
-•	In [testing.py](/testing.py) are present few tests for the main function in order to control cases with special input parameters and campare the result of range for a known case.
+•	In [testing.py](/testing.py) are present few tests for the main function in order to control cases with special input parameters and compare the result of range for a known case.
 
 Final plots for a proton energy of 100 MeV:
 
