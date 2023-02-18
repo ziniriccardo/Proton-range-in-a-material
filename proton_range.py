@@ -121,30 +121,28 @@ def compute_range(particle,energy,material,mat_properties):
         dE=stop_power*dx
         energy_beam=energy_beam-dE
        
-        #define better bragg peak
+        #Define better the Bragg Peak
         
         if (position>2):
             if  (stop_powers[position]- stop_powers[position-1]> stop_powers[position-1]/15) : break
-           
+                
         position+=1 
     
     if position!=0:
         positions[position]=positions[position-1]
         stop_powers[position]=0
         stop_powers[position-1]=0
-    #create new arrays 
+        
+    #create plot arrays 
     plot_stop_powers=np.empty(position)
     plot_energies=np.empty(position)
     plot_positions=np.empty(position)
     
-    #fill new arrays
+    #fill plot arrays
     for i in range(0,position):
         
         plot_stop_powers[i]=stop_powers[i]
         plot_energies[i]=energies[i]
         plot_positions[i]=positions[i]
     
-  
-    return plot_stop_powers, plot_positions, plot_energies, material, position
-    #return stop_powers, positions, energies, material, position
-      
+    return plot_stop_powers, plot_positions, plot_energies, material, position      
