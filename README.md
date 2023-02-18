@@ -20,11 +20,11 @@ The steps needed to run the code and plot the results are:
 ## Project Structure
 The project is divided into different files
 
-•	In [bragg_peak.py](/bragg_peak.py) there is the main function which compute Bethe Bloch, ranges and energies values. After its execution arrays are saved for making plots.
+•	In [proton_range.py](/proton_range.py) there is the main function which compute Bethe Bloch, ranges and energies values. After its execution arrays are saved for making plots.
 
 •	In [materials.txt](/materials.txt) there are all input parameters for particle and target material and local paths for the array data and for the plots.
 
-•	In [compile_bragg.py](/compile_bragg.py) there's the core of the code: the main function is executed to make the computation using parameters in input from materials.txt file. A final terminal output confirms that all worked properly printing out the result.
+•	In [compile.py](/compile.py) there's the core of the code: the main function is executed to make the computation using parameters in input from materials.txt file. A final terminal output confirms that all worked properly printing out the result.
 
 •	In [plot.py](/plot.py) there are the two final plots settings. Stopping power and energy in function of range of the particle. Using configparser data are loaded form the saved arrays.
 
