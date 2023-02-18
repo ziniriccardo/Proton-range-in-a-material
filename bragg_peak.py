@@ -5,11 +5,14 @@ Created on Thu Dec  1 16:53:34 2022
 @author: ricky
 """
 
+#Constants
+
+
 import numpy as np
 from math import log as ln
 
 
-def compute_bethe_bloch(particle,energy,material,mat_properties):
+def compute_range(particle,energy,material,mat_properties):
     
     """"
     This method performs a range calculation for a proton in a chosen material
@@ -43,11 +46,13 @@ def compute_bethe_bloch(particle,energy,material,mat_properties):
     
     #vectors size
     N=10000
+    
     positions=np.empty(N)
-   
     #energy step
     dE=energy/1000
-    position=0
+    #position index
+    i=0
+    
     
         
     while energy_beam>0 and stop_power>=0:
@@ -70,33 +75,39 @@ def compute_bethe_bloch(particle,energy,material,mat_properties):
         stop_power=(K*z**2*mat_properties[1]/beta**2)*(0.5*ln( 2*m_e*beta_gamma**2*tmax/mat_properties[2]**2)- beta**2 -delta_corr/2 -shell/mat_properties[3] ) 
         
         #Fill arrays 
-        positions[position]=x
+        
         
         #position step
         dx=dE/stop_power
         
         energy_beam=energy_beam-dE
+        positions[i]=x
+        #energies_1[position2]=energy_beam
+       
+       
+        i+=1 
         
-        position+=1 
- 
-        
-    #Re-initialize vectors
+    print(i)    
+    #re-initialize vectors
     #New loop used to make plots. Needed because stepsize is defined by path length of particle to make each
     #Each point in the plot equally spaced
-    
     x=0
     stop_power=0
     
     #depth step
-    dx=positions[position-1]/(1000) 
+    
+    dx=positions[i-1]/(1000) 
     
     energy_beam=energy
-    dE=energy/N
     
-    stop_powers_1=np.empty(N)
-    positions_1=np.empty(N)
-    energies_1=np.empty(N)
-    position2=0
+    #create arrays
+    
+    stop_powers=np.empty(i)
+    positions=np.empty(i)
+    energies=np.empty(i)
+    
+    #position index
+    position=0
     
     while energy_beam>0 and stop_power>=0:
         x=x+ dx    
@@ -117,52 +128,37 @@ def compute_bethe_bloch(particle,energy,material,mat_properties):
         stop_power=(K*z**2*mat_properties[1]/beta**2)*(0.5*ln( 2*m_e*beta_gamma**2*tmax/mat_properties[2]**2)- beta**2 -delta_corr/2 -shell/mat_properties[3] ) 
         
         #Fill arrays
-        stop_powers_1[position2]=stop_power
-        positions_1[position2]=x
-        energies_1[position2]=energy_beam
+        stop_powers[position]=stop_power
+        positions[position]=x
+        energies[position]=energy_beam
         
         dE=stop_power*dx
         energy_beam=energy_beam-dE
-        
+       
         #define better bragg peak
         
-        if (position2>2):
-            if  (stop_powers_1[position2]- stop_powers_1[position2-1]> stop_powers_1[position2-1]/15) : break
+        if (position>2):
+            if  (stop_powers[position]- stop_powers[position-1]> stop_powers[position-1]/15) : break
            
-        #print('energies', energies[position2])
-        #print('position',positions[position2])
-        #print('st.powers',(1/rho)*stop_powers[position2])
+        position+=1 
     
-        position2+=1 
-        
-    positions_1[position2]=positions[position2-1]
-    stop_powers_1[position2]=0
-    stop_powers_1[position2-1]=0
-    
+    if position!=0:
+        positions[position]=positions[position-1]
+        stop_powers[position]=0
+        stop_powers[position-1]=0
     #create new arrays 
-    plot_stop_powers=np.empty(position2)
-    plot_energies=np.empty(position2)
-    plot_positions=np.empty(position2)
+    plot_stop_powers=np.empty(position)
+    plot_energies=np.empty(position)
+    plot_positions=np.empty(position)
     
     #fill new arrays
-    for i in range(0,position2):
-        plot_stop_powers[i]=stop_powers_1[i]
-        plot_energies[i]=energies_1[i]
-        plot_positions[i]=positions_1[i]
+    for i in range(0,position):
         
-    return plot_stop_powers, plot_positions, plot_energies,material, position2
-"""
-def compute_dose(vector):
-    #number of proton per cm**2
-    fluence=1e9
-    for i in range(0,len(vector[2])):
-        
-        #factor to convert ev to joule and g to kg (1 Gy=1J/kg)
-        conversion=1.6e-12/10**-3
-        
-        #from energy loss we compute dose in Gy to make its plot-SOBP
-        vector[2][i]=conversion*(fluence*vector[2][i])
-        return vector 
-#compute_bethe_bloch('pion',50,'x')     
-"""     
+        plot_stop_powers[i]=stop_powers[i]
+        plot_energies[i]=energies[i]
+        plot_positions[i]=positions[i]
+    
+  
+    return plot_stop_powers, plot_positions, plot_energies, material, position
+    #return stop_powers, positions, energies, material, position
       
