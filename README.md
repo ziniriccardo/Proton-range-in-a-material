@@ -15,9 +15,9 @@ The steps needed to run the code and plot the results are:
 
 1-Install all the necessary libraries using the preferred installer (like pip or conda). The libraries used in this code are numpy, configparser,  os, sys and matplotlib.
 
-2-	Launch the file [compile_bragg.py](/compile_bragg.py) which imports required paramteters from [materials.txt](/materials.txt) using configparser library: insert 'python compile.py materials.txt' in the command line. Input parameters can be modified choosing a different target material with its corresponding properties: density, proton/neutron ratio, ionization energy and number of protons. The resulting data are saved in the data folder using their local paths.
+2-Launch the file [compile_bragg.py](/compile_bragg.py) which imports required paramteters from [materials.txt](/materials.txt) using configparser library: insert 'python compile.py materials.txt' in the command line. Input parameters can be modified choosing a different target material with its corresponding properties. The resulting data are saved in the data folder using their local paths.
 
-3-	Finally, launch the plot file plot.py using the same configuration: 'python plot.py materials.txt' in the command line. Through their local paths data are load from materials.txt and the plots are saved in the **plot** folder. 
+3-Finally, launch the plot file plot.py using the same configuration: 'python plot.py materials.txt' in the command line. Through their local paths data are load from materials.txt and the plots are saved in the **plot** folder. 
 
 ## Project Structure
 The project is divided into different files
@@ -26,7 +26,7 @@ The project is divided into different files
 
 •	In [testing.py](/testing.py) are present few tests for the main function in order to control cases with special input parameters and control result of range for a known case.
 
-•	In [materials.txt](/materials.txt) there are all input parameters for particle and target material and local paths for the array data and for the plots.
+•	In [materials.txt](/materials.txt) there are all input parameters for particle and target material and local paths for the array data and for the plots. To make the example a 100 MeV proton into a Carbon target was choosen.
 
 •	In [compile_bragg.py](/compile_bragg.py) there is the main part of the simulation: it computes the main function using parameters in input from materials.txt file. And a final terminal output which confirms that all worked properly printing out the result.
 
